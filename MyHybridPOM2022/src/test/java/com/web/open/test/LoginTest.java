@@ -4,12 +4,12 @@ import static org.testng.Assert.assertTrue;
 
 import java.util.Properties;
 //
-//import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-//import com.web.open.factory.DriverFactory;
-//import com.web.open.pages.LoginPage;
+import com.web.open.factory.DriverFactory;
+import com.web.open.pages.LoginPage;
 
 public class LoginTest extends BaseTest {
 
@@ -36,7 +36,6 @@ public class LoginTest extends BaseTest {
 	@Test
 	public void loginTest() throws Exception {
 		
-		Thread.sleep(2000);
 
 		loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
 
@@ -50,7 +49,7 @@ public class LoginTest extends BaseTest {
 		Assert.assertEquals(loginlinkscount, 13);
 
 	}
-	
+	@Test
 	public void footerLinksTest() {
 		int footerlinkscount = loginPage.getFooterLinks().size();
 		

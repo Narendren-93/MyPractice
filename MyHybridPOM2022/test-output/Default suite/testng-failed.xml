@@ -5,6 +5,7 @@
     <classes>
       <class name="com.web.open.test.LoginTest">
         <methods>
+          <include name="footerLinksTest"/>
           <include name="tearDown"/>
           <include name="setup"/>
           <include name="loginTest"/>
