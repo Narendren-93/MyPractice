@@ -13,9 +13,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 
-	Properties prop;
+	public Properties prop;
 
-	WebDriver driver;
+	public WebDriver driver;
 
 	public WebDriver init_Driver(Properties prop) {
 
@@ -56,13 +56,11 @@ public class DriverFactory {
 			ip = new FileInputStream(
 					"E:/Eclipse Workspace/MyHybridPOM2022/src/main/resources/Config/config.properties");
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
 			prop.load(ip);
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 
 		}

@@ -1,5 +1,7 @@
 package com.web.open.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -31,9 +33,9 @@ public class LoginPage {
 		return elementUtil.getPageTitle();
 	}
 
-	public void isForgetPwdLinkExists() {
+	public boolean isForgetPwdLinkExists() {
 
-		elementUtil.checkElementVisibility(forgetlink);
+		return elementUtil.checkElementVisibility(forgetlink);
 
 	}
 
@@ -45,14 +47,14 @@ public class LoginPage {
 
 	}
 
-	public void getLoginLinks() {
+	public List<String> getLoginLinks() {
 
-		elementUtil.getElementsText(loginlinks);
+		return elementUtil.getElementsText(loginlinks);
 
 	}
 
-	public void getFooterLinks() {
-		elementUtil.getElementsText(footerlinks);
+	public List<String> getFooterLinks() {
+		return elementUtil.getElementsText(footerlinks);
 
 	}
 
